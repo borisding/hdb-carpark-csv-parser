@@ -1,0 +1,23 @@
+{
+  "name": "hdb-carpark-csv-parser",
+  "version": "1.0.0",
+  "description": "Download and convert HDB Carpark CSV to JSON file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index.js"
+  },
+  "keywords": [
+    "HDB",
+    "Carpark",
+    "HDB Carpark",
+    "Carpark Info",
+    "Singapore"
+  ],
+  "author": "Boris Ding",
+  "license": "MIT",
+  "dependencies": {
+    "csvtojson": "^1.1.9",
+    "download": "^6.2.5"
+  }
+}
