@@ -18,6 +18,12 @@
   "license": "MIT",
   "dependencies": {
     "csvtojson": "^1.1.9",
-    "download": "^6.2.5"
+    "download": "^6.2.5",
+    "mkdirp-promise": "^5.0.1"
+  },
+  "config": {
+    "sourceUrl": "https://data.gov.sg/dataset/1a60dcc1-8c9f-450e-ab6f-6d7a03228bfa/download",
+    "csvPath": "./csv",
+    "jsonPath": "./json"
   }
 }
