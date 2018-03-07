@@ -1,8 +1,7 @@
 ## hdb-carpark-csv-parser
 
-* Node.js script for downloading Singapore HDB Carpark dataset and converting it to JSON files as output.
+* Node.js script for downloading Singapore HDB Carpark dataset and converting it from CSV to JSON files as output.
 * Datasource: [https://data.gov.sg/dataset/hdb-carpark-information](https://data.gov.sg/dataset/hdb-carpark-information)
-* CSV file will be downloaded and extracted to `csv` folder for parsing.
 
 ## Usage
 
@@ -16,6 +15,7 @@ npm run build
 
 ## Output
 
+* CSV file will be downloaded and extracted to `csv` folder for parsing.
 * Two types fo JSON files will be generated in `json` folder:
 
 i. List format for `records`, example:

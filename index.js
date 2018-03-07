@@ -6,7 +6,6 @@ const mkdirp = require('mkdirp-promise');
 const { sourceUrl, csvPath, jsonPath } = require('./package').config;
 
 function parseCsv(source) {
-  let total = 0;
   const mapData = [];
   const listData = [];
   const toStr = (input, space = 2) => JSON.stringify(input, null, space);
@@ -14,7 +13,6 @@ function parseCsv(source) {
   return csv()
     .fromFile(source)
     .on('json', json => {
-      ++total;
       mapData.push(`${toStr(json['car_park_no'])}: ${toStr(json)}`);
       listData.push(toStr(json));
     })
@@ -25,7 +23,7 @@ function parseCsv(source) {
         .then(() => {
           const dataset = records =>
             toStr({
-              total,
+              total: listData.length,
               records: JSON.parse(records)
             });
           const mapDataset = dataset(`\{${mapData.join(',')}\}`);
@@ -70,6 +68,7 @@ function downloadCsv() {
     })
     .catch(error => {
       console.error(error);
+      process.exit(1);
     });
 }
 
