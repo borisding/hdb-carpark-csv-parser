@@ -1,7 +1,7 @@
 {
   "name": "hdb-carpark-csv-parser",
   "version": "1.0.0",
-  "description": "Download and convert HDB Carpark CSV to JSON file.",
+  "description": "Download and convert HDB Carpark CSV to JSON files.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
